@@ -21,31 +21,33 @@
 
 import 'package:amplify_datastore_plugin_interface/amplify_datastore_plugin_interface.dart';
 import 'Todo.dart';
+import 'User.dart';
 
 export 'Todo.dart';
+export 'User.dart';
 
 class ModelProvider implements ModelProviderInterface {
   @override
-  String version = "371efcf4920535adf75f674858b892fd";
+  String version = "5e92e818b01b239dcf68d23120f6f629";
   @override
-  List<ModelSchema> modelSchemas = [Todo.schema];
+  List<ModelSchema> modelSchemas = [Todo.schema, User.schema];
   static final ModelProvider _instance = ModelProvider();
 
   static ModelProvider get instance => _instance;
-
+  
   ModelType getModelTypeByModelName(String modelName) {
-    switch (modelName) {
-      case "Todo":
-        {
-          return Todo.classType;
-        }
-        break;
-      default:
-        {
-          throw Exception(
-              "Failed to find model in model provider for model name: " +
-                  modelName);
-        }
+    switch(modelName) {
+    case "Todo": {
+    return Todo.classType;
+    }
+    break;
+    case "User": {
+    return User.classType;
+    }
+    break;
+    default: {
+    throw Exception("Failed to find model in model provider for model name: " + modelName);
+    }
     }
   }
 }

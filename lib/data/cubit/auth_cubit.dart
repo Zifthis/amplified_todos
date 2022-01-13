@@ -43,5 +43,3 @@ class AuthCubit extends Cubit<AuthState> {
     }
   }
 }
-matijakvcvc
-@gmail.com

@@ -1,4 +1,3 @@
-
 import 'package:amplified_todos/data/repository/auth_repository.dart';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
@@ -44,4 +43,5 @@ class AuthCubit extends Cubit<AuthState> {
     }
   }
 }
-matijakvcvc@gmail.com
+matijakvcvc
+@gmail.com
